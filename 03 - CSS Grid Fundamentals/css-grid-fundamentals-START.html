@@ -7,9 +7,35 @@
   <link rel="stylesheet" href="../assets/style.css">
   <title>CSS Grid Fundamentals!</title>
 </head>
-
+<style>
+    .container {
+      display: grid;
+      grid-template-columns: 200px 500px;
+      grid-template-rows: 200px 100px 400px;
+      grid-gap: 20px;
+    }
+</style>
 <body>
-
+    <p>Grid uses <i>tracks</i> (collectively the columns+rows)
+      which, within a container, allow for a template-level stying for said columns/rows.</p>
+      <p>We can also use grid-gap for creating marginal space between tracks</p>
+      <p>when a fixed pixel (or other value like rem, pct, etc.) is assigned, it will remain fixed to that value in responsive view.
+        When <i>auto</i> is assigned within these same values, it will adjust according to the remaining space alloted within that track.
+        We can use functions like <code>grid-template-columns: repeat(6, 100px)</code>, which will create six columns all of 100px in width.
+      </p>  
+  <div class="container">
+    <div class="item">1
+  </div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+    <div class="item">10</div>
+  </div>
 </body>
 
 </html>

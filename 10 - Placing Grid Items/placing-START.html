@@ -18,7 +18,7 @@
     <div class="item item6">6</div>
     <div class="item item7">7</div>
     <div class="item item8">8</div>
-    <div class="item item8">💩</div>
+    <div class="item poop">💩</div>
     <div class="item item9">9</div>
     <div class="item item10">10</div>
     <div class="item item11">11</div>
@@ -48,6 +48,19 @@
       display: grid;
       grid-gap: 20px;
       grid-template-columns: repeat(5, 1fr);
+    }
+
+    .poop {
+      /* 
+      grid-column-start: 1; -- starts item at the first column of the grid
+      grid-column-end: 6;   -- ends at last (nth being 5 + 1) of the grid
+      */ 
+      grid-column: 1 / -1; /* similar to width:100% (of the grid) */
+      grid-row: auto / 5; /* this sets the start of the grid item to it's inherent space,
+       and ends five rows deep. because there are now declared rows, it will take up the grid entirely,
+       and then the rest of the contents are within an implicit grid. 
+      */
+      background: #BADA55;
     }
   </style>
 </body>

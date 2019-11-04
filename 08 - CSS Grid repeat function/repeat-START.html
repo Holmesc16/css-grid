@@ -31,6 +31,9 @@
     .container {
       display: grid;
       grid-gap: 20px;
+      grid-template-columns: 100px repeat(3, 2fr auto) 50px auto;
+      /* the repeat function can be used along with explicit declaration of additional columns/rows  */
+      grid-auto-flow: row;
     }
   </style>
 </body>

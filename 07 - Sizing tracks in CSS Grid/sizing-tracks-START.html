@@ -24,13 +24,22 @@
     <div class="item">12</div>
     <div class="item">13</div>
     <div class="item">14</div>
-    <div class="item">15</div>
+    <div class="item">Cade<br/>Holmes</div>
   </div>
 
   <style>
     .container {
       display: grid;
       grid-gap: 20px;
+  /*  grid-template-columns: 25% 25% 25% 25%;  percentage does not calculate for grid gap space + track size */
+  /*  grid-template-columns: 1fr 1fr 1fr 1fr;*/ /* think of *fr* as "free-space */
+      grid-template-columns: auto 1fr auto 1fr;
+      border: 10px solid var(--yellow);
+      /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
+      height:600px;
+      /* fractional units represent the amount of space after all elements are laid out
+         css grid will lay out all explicit items, then 
+      */
     }
   </style>
 </body>
